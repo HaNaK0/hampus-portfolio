@@ -1,14 +1,6 @@
 [package]
 name = "hampus-portfolio"
 version = "0.1.0"
-edition = "2021"
-description = "The future portfolio of Hampus Huledal"
-readme = "README.md"
-# repository = todo
-license = "MIT OR Apache-2.0"
-keywords = ["yew", "trunk", "portfolio"]
-categories = ["gui", "wasm", "web-programming"]
+edition = "2024"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-yew = "0.19"
