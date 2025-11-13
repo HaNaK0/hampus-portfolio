@@ -16,7 +16,7 @@ fn main() {
 #[component]
 fn App() -> impl IntoView {
     (
-        h1().child("Hampus portfolio"),
+        h1().child("Hampus portfolio").class("bg-sky-500"),
         p().child("This is just a beginning written in rust using leptos"),
     )
 }
