@@ -1,0 +1,8 @@
+[package]
+name = "leptos-conf-markdown"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+leptos = { version = "0.8.12", features = ["csr"] }
+pulldown-cmark = "0.13.0"

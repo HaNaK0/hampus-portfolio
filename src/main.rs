@@ -1,8 +1,8 @@
 use leptos::{
-    html::{h1, p},
     prelude::*,
 };
 use log::info;
+use leptos_conf_markdown::Markdown;
 
 fn main() {
     // makes sure panics shows up as readble errors in the web console
@@ -15,8 +15,26 @@ fn main() {
 #[allow(non_snake_case)]
 #[component]
 fn App() -> impl IntoView {
-    (
-        h1().child("Hampus portfolio").class("bg-sky-500"),
-        p().child("This is just a beginning written in rust using leptos"),
-    )
+    view! { <Markdown path="./texts/hello_world.md"/>}
 }
+
+#[allow(non_snake_case)]
+#[component]
+fn Nav() -> impl IntoView {
+    view! {
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">"Bio"</a>
+                </li>
+                <li>
+                    <a href="/sailor">"Sailor"</a>
+                </li>
+                <li>
+                    <a href="/game-dev">"Game Dev"</a>
+                </li>
+            </ul>
+        </nav>
+    }
+}
+

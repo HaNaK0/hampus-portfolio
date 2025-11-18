@@ -2,7 +2,4 @@
 /target/
 /Cargo.lock
 
-
-# Added by cargo
-
-/target
+/leptos-conf-markdown/target/
