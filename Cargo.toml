@@ -13,3 +13,6 @@ leptos = { version = "0.8.12", features = ["csr"] }
 leptos-conf-markdown = { version = "0.1.0", path = "leptos-conf-markdown" }
 leptos_router = "0.8.9"
 log = "0.4.28"
+reqwest = "0.12.24"
+url = "2.5.7"
+web-sys = "0.3.82"

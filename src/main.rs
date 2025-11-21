@@ -1,8 +1,6 @@
-use leptos::{
-    prelude::*,
-};
-use log::info;
+use leptos::prelude::*;
 use leptos_conf_markdown::Markdown;
+use log::info;
 
 fn main() {
     // makes sure panics shows up as readble errors in the web console
@@ -15,7 +13,11 @@ fn main() {
 #[allow(non_snake_case)]
 #[component]
 fn App() -> impl IntoView {
-    view! { <Markdown path="./texts/hello_world.md"/>}
+    let file_content = LocalResource::new(move || read_file("./resources/hello_world.md"));
+    view! { 
+        <Markdown path="./texts/hello_world.md" /> 
+        <p>{file_content.get()}</p>
+    }
 }
 
 #[allow(non_snake_case)]
@@ -38,3 +40,13 @@ fn Nav() -> impl IntoView {
     }
 }
 
+async fn read_file(_path: &str) -> String {
+    let this_page = web_sys::window()
+        .expect("failed to get web sys wondow")
+        .location()
+        .href()
+        .expect("failed to get url");
+
+    info!("this page is \"{}\"", this_page);
+    this_page.to_string()
+}
